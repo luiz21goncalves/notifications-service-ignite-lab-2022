@@ -1,8 +1,8 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { randomUUID } from 'node:crypto';
-import { CreateNotificationBody } from './create-notification-body';
 
-import { PrismaService } from './prisma/prisma.service';
+import { CreateNotificationBody } from './infra/create-notification-body';
+import { PrismaService } from './infra/prisma/prisma.service';
 
 @Controller('notifications')
 export class AppController {
