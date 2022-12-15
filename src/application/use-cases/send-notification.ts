@@ -16,7 +16,9 @@ interface SendNotificationResponse {
 
 @Injectable()
 export class SendNotification {
-  constructor(private notificationsRepository: NotificationsRepository) {}
+  constructor(
+    private readonly notificationsRepository: NotificationsRepository,
+  ) {}
 
   async execute(
     request: SendNotificationRequest,
